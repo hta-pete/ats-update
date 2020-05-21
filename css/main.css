@@ -133,6 +133,7 @@ a {
 
 main {
   width: 100%;
+  min-width: 1068px;
   padding-top: 90px;
 }
 
@@ -268,6 +269,9 @@ header {
   height: 90px;
   background: #222;
 }
+header .header-wrap {
+  min-width: 1068px;
+}
 header nav {
   position: absolute;
   top: 0;
@@ -312,6 +316,14 @@ header .header-apply_btn {
   color: white;
 }
 
+@media (max-width: 1068px) {
+  header .logo {
+    margin-left: 20px;
+  }
+  header nav {
+    left: 210px;
+  }
+}
 /* ––––––––––––––––––––––––––––––––––––––––
 
 QUICK LINKS
@@ -1081,6 +1093,14 @@ HTA MENU
   margin-top: 20px;
 }
 
+@media (max-width: 1280px) {
+  .home-hero_slide-copy {
+    padding: 0 20px 0 60px;
+  }
+  .home-hero_slide-copy.pad-right {
+    padding: 0 60px 0 20px;
+  }
+}
 .slick-arrow.slide-next {
   display: flex;
   position: absolute;
