@@ -1,0 +1,165 @@
+#home-hero{
+  position:relative;
+  width:100%;
+  height:600px;
+  border-bottom:1px solid $border_light;
+  .slick-slide{
+    height:600px;
+  }
+}
+.home-hero-wrap{
+  position:relative;
+  height:100%;
+  background:#f9f9f9;
+}
+
+.home-hero_slider{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.home-hero_slide{
+  height:100%;
+  width:100%;
+  .col-1-2{
+    height:100%;
+    overflow:hidden;
+    img{
+      display:inline-block;
+      height:100%;
+      width:auto;
+    }
+    &.align-right{
+      text-align:right;
+    }
+  }
+  .slide-header{
+    text-align:center;
+    padding:20px 0 15px 0;
+  }
+  .col-1-3{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    overflow:hidden;
+    img{
+      display:block;
+      height:100%;
+      width:auto;
+    }
+    .image-copy{
+      position:absolute;
+      bottom:30px;
+      left:0;
+      width:100%;
+      text-align:center;
+      color:white;
+    }
+    .image-copy_driver{
+      display:inline-block;
+      font-style:italic;
+      margin-top:3px;
+    }
+  }
+  .column-3-row{
+    height:380px;
+  }
+  .column-3-copy{
+    max-width:600px;
+    margin-top:30px;
+    .btn-primary-wrap{
+        text-align:center;
+        .btn-primary{
+          margin:0;
+        }
+      }
+  }
+}
+.home-hero_slide-copy{
+  padding:0 20px 0 185px;
+  &.pad-right{
+    padding:0 185px 0 20px;
+  }
+  h1{
+
+  }
+  h2{
+    margin-top:5px;
+  }
+  p{
+    margin-top:20px;
+    //max-width:460px;
+  }
+}
+
+.slick-arrow.slide-next{
+  display:flex;
+  position:absolute;
+  top:50%;
+  margin-top:-30px;
+  right:0;
+  width:40px;
+  height:70px;
+  background:rgba(255,255,255,0.8);
+  color:$red;
+  i{
+    font-size:18px;
+  }
+}
+.slick-arrow.slide-prev{
+  display:flex;
+  position:absolute;
+  top:50%;
+  margin-top:-30px;
+  left:0;
+  width:40px;
+  height:70px;
+  background:rgba(255,255,255,0.8);
+  color:$red;
+  i{
+    font-size:18px;
+  }
+}
+
+
+.slick-arrow.slide-next, .slick-arrow.slide-prev{
+  @include opacity(0);
+  @include transition(opacity 0.8s $easeOutExpo);
+}
+.home-hero-wrap:hover{
+  .slick-arrow.slide-next, .slick-arrow.slide-prev{
+    @include opacity(1);
+  }
+}
+
+
+.slick-dots{
+  position:absolute;
+  text-align:center;
+  bottom:10px;
+  width:100%;
+  li{
+    display:inline-block;
+    margin:0 5px;
+    span{
+      display:block;
+      width:8px;
+      height:8px;
+      background:#bbb;
+      border-radius:100%;
+      cursor:pointer;
+      &:hover{
+        background:$red;
+      }
+    }
+    &.slick-active{
+      span{
+        background:$primary;
+      }
+    }
+  }
+}
+
+
